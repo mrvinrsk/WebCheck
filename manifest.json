@@ -20,13 +20,13 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": [],
+      "js": ["communication.js"],
       "css": ["html/global.css"]
     }
   ],
 
   "background": {
-    "scripts": ["js/background.js"]
+    "scripts": ["background.js"]
   },
 
   "browser_action": {
@@ -49,6 +49,11 @@
 
   "web_accessible_resources": [
     "html/global.css",
-    "icons/48.png"
+    "icons/48.png",
+    "svg/done.svg",
+    "svg/cross.svg",
+    "svg/meh.svg",
+    "font/google-icons.woff2",
+    "font/nunito-v25-latin"
   ]
 }

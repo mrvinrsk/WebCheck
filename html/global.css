@@ -1,3 +1,112 @@
+
+/* fallback */
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/google-icons.woff2) format("woff2");
+}
+
+.material-symbols-outlined,
+.gicon {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* nunito-200 - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200;
+  src: local(""), url("../font/nunito-v25-latin-200.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-regular - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../font/nunito-v25-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-700 - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../font/nunito-v25-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-900 - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("../font/nunito-v25-latin-900.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-200italic - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 200;
+  src: local(""),
+    url("../font/nunito-v25-latin-200italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-200italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-italic - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../font/nunito-v25-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-700italic - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""),
+    url("../font/nunito-v25-latin-700italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-900italic - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 900;
+  src: local(""),
+    url("../font/nunito-v25-latin-900italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../font/nunito-v25-latin-900italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root {
   --wc-col-primary: #013350;
   --wc-col-heading: #f49a26;
@@ -14,7 +123,7 @@
 
 body.webcheck {
   transition-duration: var(--wc-transition-duration);
-  min-width: 250px;
+  min-width: 350px;
 }
 
 body.webcheck.light {
@@ -48,11 +157,37 @@ body.webcheck h6 {
   color: var(--wc-col-heading);
 }
 
-/*p,
-span,
-b,
-i,
-u,
-a {
-    color: var(--col-text);
-}*/
+body.webcheck p,
+body.webcheck span,
+body.webcheck b,
+body.webcheck i,
+body.webcheck u,
+body.webcheck a {
+  color: var(--wc-col-text);
+}
+
+body.webcheck h1,
+body.webcheck h2,
+body.webcheck h3,
+body.webcheck h4,
+body.webcheck h5,
+body.webcheck h6,
+body.webcheck p,
+body.webcheck span,
+body.webcheck b,
+body.webcheck i,
+body.webcheck u,
+body.webcheck a {
+  font-family: "Nunito", sans-serif;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.icon, .icon-text img {
+    height: 1.5em;
+    width: auto;
+}
